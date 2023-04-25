@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <title>ZAKUPKI DKRUPIN.RU</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <header class="header">
+            <div class="header-content">
+                <div class="container">
+                    <div class="header-content__row">
+                        <div class="header-content__logo">
+                            <a href="index.html">D K R U P I N . R U</a>
+                        </div>
+                        <div class="header-content__links">
+                            <div class="header-content__search">
+                                <div class="search-body">
+                                    <div class="search-body__text"></div>
+                                    <div class="search-body__icon">
+                                        <a href="index.html">
+                                            <img src="IMG/search_button.png" width="20" height="20" alt="Знак поиска">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="header-content__projects">
+                                <a href="projects.html">ПРОЕКТЫ</a>
+                            </div>
+                            <div class="header-content__news">
+                                <a href="news.html">НОВОСТИ</a>
+                            </div>
+                            <div class="header-content__contacts">
+                                <a href="contacts.html">КОНТАКТЫ</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <select id="groups" name="groups">
+            <optgroup label="fruits">
+              <option>Banana</option>
+              <option selected>Cherry</option>
+              <option>Lemon</option>
+            </optgroup>
+            <optgroup label="vegetables">
+              <option>Carrot</option>
+              <option>Eggplant</option>
+              <option>Potato</option>
+            </optgroup>
+        </select>
+
+        <input type="checkbox" checked id="carrots" name="carrots" value="carrots">
+
+        <fieldset>
+            <legend>What is your favorite meal?</legend>
+            <ul>
+              <li>
+                <label for="soup">Soup</label>
+                <input type="radio" checked id="soup" name="meal" value="soup">
+              </li>
+              <li>
+                <label for="curry">Curry</label>
+                <input type="radio" id="curry" name="meal" value="curry">
+              </li>
+              <li>
+                <label for="pizza">Pizza</label>
+                <input type="radio" id="pizza" name="meal" value="pizza">
+              </li>
+            </ul>
+        </fieldset>
+
+        <progress max="100" value="20">20/100</progress>
+
+        <footer class="footer">
+            <div class="container">
+                <div class="footer_row">
+                    <div class="footer_text">ИП Крупин Д.А.</div>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
