@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="./CSS/style.css">
-    <title>ZAKUPKI DKRUPIN.RU</title>
+    <title>VIDEO DKRUPIN.RU</title>
 </head>
 
 <body>
@@ -44,6 +44,125 @@
             </div>
         </header>
 
+    <div class="calculator-frame">
+        <div class="calculator-frame-content">
+            <div class="container">
+                <div class="calculator-frame-content__row">
+                    <div class="calculator-frame-content__height-of-mounting">
+                        <fieldset>
+                            <legend>ВЫСОТА УСТАНОВКИ КАМЕР</legend>
+                            <ul>
+                                <li>
+                                    <label for="three">до 3-х метров</label>
+                                    <input type="radio" checked id="three" name="height" value="three">
+                                </li>
+                                <li>
+                                    <label for="three-five">от 3 до 5 метров</label>
+                                    <input type="radio" id="three-five" name="height" value="three-five">
+                                </li>
+                                <li>
+                                    <label for="five-nine">от 5 до 9 метров</label>
+                                    <input type="radio" id="five-nine" name="height" value="five-nine">
+                                </li>
+                                <li>
+                                    <label for="more-than-nine">более 9-ти метров</label>
+                                    <input type="radio" id="more-than-nine" name="height" value="more-than-nine">
+                                </li>
+                            </ul>
+                        </fieldset>
+                    </div>
+                    <div class="calculator-frame-content__name">
+                        <fieldset>
+                            <legend>ПРОИЗВОДИТЕЛЬ</legend>
+                            <ul>
+                                <li>
+                                    <label for="dahua">Dahua</label>
+                                    <input type="radio" checked id="dahua" name="factory" value="dahua">
+                                </li>
+                                <li>
+                                    <label for="hiWatch">HiWatch</label>
+                                    <input type="radio" id="hiWatch" name="factory" value="hiWatch">
+                                </li>
+                                <li>
+                                    <label for="noMatter">Не имеет значения</label>
+                                    <input type="radio" id="noMatter" name="factory" value="noMatter">
+                                </li>
+                            </ul>
+                        </fieldset>
+                    </div>
+                    <div class="calculator-frame-content__number-of-cameras">
+                        <fieldset>
+                            <legend>КОЛИЧЕСТВО КАМЕР</legend>
+                        </fieldset>
+                    </div>
+                    <div class="calculator-frame-content__number-of-cables">
+                        <fieldset>
+                            <legend>МЕТРАЖ КАБЕЛЯ</legend>
+                        </fieldset>
+                    </div>
+                    <div class="calculator-frame-content__cable-mounting-method">
+                        <fieldset>
+                            <legend>СПОСОБ МОНТАЖА КАБЕЛЯ</legend>
+                        </fieldset>
+                    </div>
+                    <div class="calculator-frame-content__register-mounting-method">
+                        <fieldset>
+                            <legend>СПОСОБ УСТАНОВКИ РЕГИСТРАТОРА</legend>
+                            <ul>
+                                <li>
+                                    <label for="wall">На стену</label>
+                                    <input type="radio" checked id="wall" name="register-mounting" value="wall">
+                                </li>
+                                <li>
+                                    <label for="table">На стол</label>
+                                    <input type="radio" id="table" name="register-mounting" value="table">
+                                </li>
+                                <li>
+                                    <label for="server">В серверный шкаф</label>
+                                    <input type="radio" id="server" name="register-mounting" value="server">
+                                </li>
+                            </ul>
+                        </fieldset>
+                    </div>
+                    <div class="calculator-frame-content__internet-available">
+                        <fieldset>
+                            <legend>ДОСТУП В ИНТЕРНЕТ</legend>
+                            <ul>
+                                <li>
+                                    <label for="yes">Да</label>
+                                    <input type="radio" checked id="yes" name="internet-available" value="yes">
+                                </li>
+                                <li>
+                                    <label for="no">Нет</label>
+                                    <input type="radio" id="no" name="internet-available" value="no">
+                                </li>
+                            </ul>
+                        </fieldset>
+                    </div>
+                    <div class="calculator-frame-content__documentation-available">
+                        <fieldset>
+                            <legend>ДОКУМЕНТАЦИЯ ДЛЯ СДАЧИ</legend>
+                            <ul>
+                                <li>
+                                    <label for="no">Не нужна</label>
+                                    <input type="radio" checked id="no" name="documentation" value="no">
+                                </li>
+                                <li>
+                                    <label for="act">Нужен акт выполненных работ</label>
+                                    <input type="radio" id="act" name="documentation" value="act">
+                                </li>
+                                <li>
+                                    <label for="full">Нужен акт выполненных работ и исполнительная документация</label>
+                                    <input type="radio" id="full" name="documentation" value="full">
+                                </li>
+                            </ul>
+                        </fieldset>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
         <select id="groups" name="groups">
             <optgroup label="fruits">
               <option>Banana</option>
@@ -57,27 +176,33 @@
             </optgroup>
         </select>
 
-        <input type="checkbox" checked id="carrots" name="carrots" value="carrots">
-
-        <fieldset>
-            <legend>What is your favorite meal?</legend>
-            <ul>
-              <li>
-                <label for="soup">Soup</label>
-                <input type="radio" checked id="soup" name="meal" value="soup">
-              </li>
-              <li>
-                <label for="curry">Curry</label>
-                <input type="radio" id="curry" name="meal" value="curry">
-              </li>
-              <li>
-                <label for="pizza">Pizza</label>
-                <input type="radio" id="pizza" name="meal" value="pizza">
-              </li>
-            </ul>
-        </fieldset>
-
-        <progress max="100" value="20">20/100</progress>
+        <div class="slider">
+            <output for="fader" id="volume" name="test">0</output>
+            <input type="range" id="fader" min="0" max="600" value="0" step="1" oninput="outputUpdate(value)" name="test">
+        </div>
+    
+        <script type="text/javascript">
+            function outputUpdate(vol) {
+                var output = document.querySelector('#volume');
+                output.value = vol;
+                output.style.left = vol + 'px';
+                if(output.value > 0) {
+                    output.style.left = vol - 10 + 'px';
+                }
+                if(output.value > 99) {
+                    output.style.left = vol - 40 + 'px';
+                }
+                if(output.value > 240) {
+                    output.style.left = vol - 45 + 'px';
+                }
+                if(output.value > 430) {
+                    output.style.left = vol - 50 + 'px';
+                }
+                if(output.value > 470) {
+                    output.style.left = vol - 55 + 'px';
+                }
+            }
+        </script>
 
         <footer class="footer">
             <div class="container">
