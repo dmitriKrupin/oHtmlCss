@@ -93,11 +93,19 @@
                     <div class="calculator-frame-content__number-of-cameras">
                         <fieldset>
                             <legend>КОЛИЧЕСТВО КАМЕР</legend>
+                            <div class="number-of-cameras">
+                                <output for="cameras" id="camerasId" name="number-of-cameras">0</output>
+                                <input type="range" id="cameras" min="0" max="100" value="0" name="number-of-cameras" step="1" oninput="outputUpdate(value, name)">
+                            </div>
                         </fieldset>
                     </div>
                     <div class="calculator-frame-content__number-of-cables">
                         <fieldset>
                             <legend>МЕТРАЖ КАБЕЛЯ</legend>
+                            <div class="number-of-cables">
+                                <output for="cables" id="cablesId" name="number-of-cables">0</output>
+                                <input type="range" id="cables" min="0" max="600" value="0" name="number-of-cables" step="1" oninput="outputUpdate(value, name)">
+                            </div>
                         </fieldset>
                     </div>
                     <div class="calculator-frame-content__cable-mounting-method">
@@ -176,34 +184,6 @@
             </optgroup>
         </select>
 
-        <div class="slider">
-            <output for="fader" id="volume" name="test">0</output>
-            <input type="range" id="fader" min="0" max="600" value="0" step="1" oninput="outputUpdate(value)" name="test">
-        </div>
-    
-        <script type="text/javascript">
-            function outputUpdate(vol) {
-                var output = document.querySelector('#volume');
-                output.value = vol;
-                output.style.left = vol + 'px';
-                if(output.value > 0) {
-                    output.style.left = vol - 10 + 'px';
-                }
-                if(output.value > 99) {
-                    output.style.left = vol - 40 + 'px';
-                }
-                if(output.value > 240) {
-                    output.style.left = vol - 45 + 'px';
-                }
-                if(output.value > 430) {
-                    output.style.left = vol - 50 + 'px';
-                }
-                if(output.value > 470) {
-                    output.style.left = vol - 55 + 'px';
-                }
-            }
-        </script>
-
         <footer class="footer">
             <div class="container">
                 <div class="footer_row">
@@ -212,5 +192,6 @@
             </div>
         </footer>
     </div>
+    <script type="text/javascript" src="./SCRIPTS/script.js"></script>
 </body>
 </html>
