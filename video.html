@@ -20,14 +20,11 @@
                         </div>
                         <div class="header-content__links">
                             <div class="header-content__search">
-                                <div class="search-body">
-                                    <div class="search-body__text"></div>
-                                    <div class="search-body__icon">
-                                        <a href="index.html">
-                                            <img src="IMG/search_button.png" width="20" height="20" alt="Знак поиска">
-                                        </a>
-                                    </div>
-                                </div>
+                                <form class="search-body">
+                                    <input type="search" id="site-search" name="search"
+                                    placeholder="Введите запрос...">
+                                    <button>ПОИСК</button>
+                                </form>
                             </div>
                             <div class="header-content__projects">
                                 <a href="projects.html">ПРОЕКТЫ</a>
@@ -38,6 +35,7 @@
                             <div class="header-content__contacts">
                                 <a href="contacts.html">КОНТАКТЫ</a>
                             </div>
+                            <button class="header-content__log-in">ЛИЧНЫЙ КАБИНЕТ</button>
                         </div>
                     </div>
                 </div>
@@ -69,6 +67,7 @@
                                     <input type="radio" id="more-than-nine" name="height" value="more-than-nine">
                                 </li>
                             </ul>
+                            <button class="next-button">ДАЛЕЕ</button>
                         </fieldset>
                     </div>
                     <div class="calculator-frame-content__name">
@@ -88,6 +87,8 @@
                                     <input type="radio" id="noMatter" name="factory" value="noMatter">
                                 </li>
                             </ul>
+                            <button class="previous-button">НАЗАД</button>
+                            <button class="next-button">ДАЛЕЕ</button>
                         </fieldset>
                     </div>
                     <div class="calculator-frame-content__number-of-cameras">
@@ -97,6 +98,8 @@
                                 <output for="cameras" id="camerasId" name="number-of-cameras">0</output>
                                 <input type="range" id="cameras" min="0" max="100" value="0" name="number-of-cameras" step="1" oninput="outputUpdate(value, name)">
                             </div>
+                            <button class="previous-button">НАЗАД</button>
+                            <button class="next-button">ДАЛЕЕ</button>
                         </fieldset>
                     </div>
                     <div class="calculator-frame-content__number-of-cables">
@@ -106,11 +109,15 @@
                                 <output for="cables" id="cablesId" name="number-of-cables">0</output>
                                 <input type="range" id="cables" min="0" max="600" value="0" name="number-of-cables" step="1" oninput="outputUpdate(value, name)">
                             </div>
+                            <button class="previous-button">НАЗАД</button>
+                            <button class="next-button">ДАЛЕЕ</button>
                         </fieldset>
                     </div>
                     <div class="calculator-frame-content__cable-mounting-method">
                         <fieldset>
                             <legend>СПОСОБ МОНТАЖА КАБЕЛЯ</legend>
+                            <button class="previous-button">НАЗАД</button>
+                            <button class="next-button">ДАЛЕЕ</button>
                         </fieldset>
                     </div>
                     <div class="calculator-frame-content__register-mounting-method">
@@ -130,6 +137,8 @@
                                     <input type="radio" id="server" name="register-mounting" value="server">
                                 </li>
                             </ul>
+                            <button class="previous-button">НАЗАД</button>
+                            <button class="next-button">ДАЛЕЕ</button>
                         </fieldset>
                     </div>
                     <div class="calculator-frame-content__internet-available">
@@ -145,6 +154,8 @@
                                     <input type="radio" id="no" name="internet-available" value="no">
                                 </li>
                             </ul>
+                            <button class="previous-button">НАЗАД</button>
+                            <button class="next-button">ДАЛЕЕ</button>
                         </fieldset>
                     </div>
                     <div class="calculator-frame-content__documentation-available">
@@ -164,6 +175,8 @@
                                     <input type="radio" id="full" name="documentation" value="full">
                                 </li>
                             </ul>
+                            <button class="previous-button">НАЗАД</button>
+                            <button class="get-cost-installation-button">ПОЛУЧИТЬ РАСЧЁТ</button>
                         </fieldset>
                     </div>
                 </div>
