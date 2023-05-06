@@ -13,11 +13,36 @@
     justify-content: center
     //flex-direction: column
     align-items: center
-    //overflow: hidden
+    overflow: hidden
+    transform: scale(0)
+    transition: transform .5s ease, height .2s ease
+
+.wrapper-login.active-popup
+    transform: scale(1)
+
+.wrapper-login.active
+    height: 520px
     
 .wrapper-login .form-box
     width: 100%
     padding: 40px
+
+.wrapper-login .form-box.login
+    transition: transform .18s ease
+    transform: translateX(0)
+
+.wrapper-login.active .form-box.login
+    transition: none
+    transform: translateX(400px)
+
+.wrapper-login .form-box.register
+    position: absolute
+    transition: none
+    transform: translateX(400px)
+
+.wrapper-login.active .form-box.register
+    transition: transform .18s ease
+    transform: translateX(0)
 
 .wrapper-login .icon-close
     position: absolute
