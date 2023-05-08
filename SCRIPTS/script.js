@@ -43,5 +43,5 @@ btnPopup.addEventListener('click', () => {
 });
 
 iconClose.addEventListener('click', () => {
-    wrapperLogin.classList.remove('active-popup'); //добавляем active-popup к тэгу wrapper-login 
+    wrapperLogin.classList.remove('active-popup'); //удаляем active-popup к тэгу wrapper-login 
 });
