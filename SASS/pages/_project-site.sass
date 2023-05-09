@@ -14,13 +14,28 @@
         font-size: 64px
         line-height: 110px
         margin: 68px 201px 68px 200px
+        @media ( max-width: 768px )
+            margin: 0px
+        @media ( max-width: 480px )
+            font-weight: 300
+            font-size: 30px
+            line-height: 50px
+    
     &__second-info
         display: flex
         justify-content: center
         gap: 60px
+        @media ( max-width: 768px )
+            flex-direction: column
+            align-items: center
+    
     &__img img
         width: 570px
         height: 293px
+        @media ( max-width: 480px )
+            width: 400px
+            height: 293px
+    
     &__description
         display: flex
         flex-direction: column
@@ -31,6 +46,12 @@
         font-weight: 400
         font-size: 22px
         line-height: 30px
+        @media ( max-width: 768px )
+            margin: 0px
+        @media ( max-width: 480px )
+            font-weight: 200
+            font-size: 14px
+            line-height: 50px
     &__call-to-action
 
 .project-calculator-video
@@ -49,13 +70,27 @@
         font-size: 64px
         line-height: 110px
         margin: 68px 201px 68px 200px
+        @media ( max-width: 768px )
+            margin: 0px
+        @media ( max-width: 480px )
+            font-weight: 300
+            font-size: 30px
+            line-height: 50px
+    
     &__second-info
         display: flex
         justify-content: center
         gap: 60px
+        @media ( max-width: 768px )
+            flex-direction: column
+            align-items: center
+            
     &__img img
         width: 570px
         height: 293px
+        @media ( max-width: 480px )
+            width: 400px
+            height: 293px
     &__description
         display: flex
         flex-direction: column
@@ -66,4 +101,10 @@
         font-weight: 400
         font-size: 22px
         line-height: 30px
+        @media ( max-width: 768px )
+            margin: 0px
+        @media ( max-width: 480px )
+            font-weight: 200
+            font-size: 14px
+            line-height: 50px
     &__call-to-action
