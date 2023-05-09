@@ -2,7 +2,6 @@
     background-color: $color-white
     position: sticky
     top: 0px
-    //@media ( max-width: 768px )
 .header-content
     color: $color-blue
     font-size: 24px
@@ -11,40 +10,47 @@
     font-style: normal
     font-weight: 800
     margin: 0px 0px 0px 25px
-    @media ( max-width: 1000px )
+    @media ( max-width: 1250px )
         margin: 0px
     &__row
         display: flex
         justify-content: space-between
+        gap: 15px
+        @media ( max-width: 1000px )
+            justify-content: space-between
     &__logo
-        flex: 0 0 40%
-        @media ( max-width: 1250px )
-            flex: 0 0 20%
     &__links
-        flex: 0 0 60%
-        @media ( max-width: 1250px )
-            flex: 0 0 80%
-        //@media ( max-width: 1000px )
-            //Оставляем только Лого, Поиск и "Гамбургер"
-        //@media ( max-width: 768px )
-            //Осталяем Лого, Иконку поиск и "Гамбургер"
         display: flex
         text-align: center
         justify-content: center
+        gap: 15px
     &__search
         display: flex
         flex-direction: column
         justify-content: center
-        flex: 0 0 18%     
+        @media ( max-width: 768px )
+            display: none
     &__projects
-        flex: 0 0 18% 
+        @media ( max-width: 1000px )
+            display: none
     &__news
-        flex: 0 0 18% 
+        @media ( max-width: 1000px )
+            display: none
     &__contacts
-        flex: 0 0 18%
+        @media ( max-width: 1000px )
+            display: none
     &__log-in
-        flex: 0 0 18%
         background: $color-blue
         color: $color-white
         border-radius: 15px
         cursor: pointer
+        margin-right: 25px
+        @media ( max-width: 1250px )
+            margin: 0px
+        @media ( max-width: 768px )
+            display: none
+    &__short-menu
+        display: none
+        cursor: pointer    
+        @media ( max-width: 1000px )
+            display: block
