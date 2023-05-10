@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="./CSS/style.css">
     <title>NEWS DKRUPIN.RU</title>
 </head>
 
@@ -19,30 +19,98 @@
                             <a href="index.html">D K R U P I N . R U</a>
                         </div>
                         <div class="header-content__links">
-                            <div class="header-content__search">
-                                <div class="search-body">
-                                    <div class="search-body__text"></div>
-                                    <div class="search-body__icon">
-                                        <a href="index.html">
-                                            <img src="IMG/search_button.png" width="20" height="20" alt="Знак поиска">
-                                        </a>
-                                    </div>
+                            <div class="header-content__short-links">
+                                <div class="header-content__search">
+                                    <form class="search-body">
+                                        <input type="search" id="site-search" name="search"
+                                        placeholder="Введите запрос...">
+                                        <button>ПОИСК</button>
+                                    </form>
                                 </div>
+                                <div class="header-content__projects">
+                                    <a href="projects.html">ПРОЕКТЫ</a>
+                                </div>
+                                <div class="header-content__news">
+                                    <a href="news.html">НОВОСТИ</a>
+                                </div>
+                                <div class="header-content__contacts">
+                                    <a href="contacts.html">КОНТАКТЫ</a>
+                                </div>
+                                <button class="header-content__log-in">ЛИЧНЫЙ КАБИНЕТ</button>
                             </div>
-                            <div class="header-content__projects">
-                                <a href="projects.html">ПРОЕКТЫ</a>
-                            </div>
-                            <div class="header-content__news">
-                                <a href="news.html">НОВОСТИ</a>
-                            </div>
-                            <div class="header-content__contacts">
-                                <a href="contacts.html">КОНТАКТЫ</a>
-                            </div>
+                            <div class="header-content__short-menu"><ion-icon name="menu-outline"></ion-icon></div>
+                            <div class="header-content__icon-close"><ion-icon name="close-outline"></ion-icon></div>
                         </div>
                     </div>
                 </div>
             </div>
         </header>
+
+        <div class="wrapper-login">
+            <span class="icon-close"><ion-icon name="close-outline"></ion-icon></span>
+            
+            <div class="form-box login">
+                <h2>Login</h2>
+                <form action="input-box">
+                    <div class="input-box">
+                        <span class="icon"><ion-icon name="mail-outline"></ion-icon></span>
+                        <input type="email" required>
+                        <label>Email</label>
+                    </div>
+                    <div class="input-box">
+                        <span class="icon"><ion-icon name="lock-closed-outline"></ion-icon></span>
+                        <input type="password" required>
+                        <label>Password</label>
+                    </div>
+                    <div class="remember-forgot">
+                        <label>
+                            <input type="checkbox">
+                            Remember me
+                        </label>
+                        <a href="#">Forgot password?</a>
+                    </div>
+                    <button type="submit" class="btn">Login</button>
+                    <div class="login-register">
+                        <p>Don`t have an account? 
+                            <a href="#" class="register-link">Register</a>
+                        </p>
+                    </div>
+                </form>
+            </div>
+    
+            <div class="form-box register">
+                <h2>Registration</h2>
+                <form action="input-box">
+                    <div class="input-box">
+                        <span class="icon"><ion-icon name="person-outline"></ion-icon></span>
+                        <input type="text" required>
+                        <label>Username</label>
+                    </div>
+                    <div class="input-box">
+                        <span class="icon"><ion-icon name="mail-outline"></ion-icon></span>
+                        <input type="email" required>
+                        <label>Email</label>
+                    </div>
+                    <div class="input-box">
+                        <span class="icon"><ion-icon name="lock-closed-outline"></ion-icon></span>
+                        <input type="password" required>
+                        <label>Password</label>
+                    </div>
+                    <div class="remember-forgot">
+                        <label>
+                            <input type="checkbox">
+                            I agree with the terms and conditions
+                        </label>
+                    </div>
+                    <button type="submit" class="btn">Register</button>
+                    <div class="login-register">
+                        <p>Already have an account? 
+                            <a href="#" class="login-link">Login</a>
+                        </p>
+                    </div>
+                </form>
+            </div>
+        </div>
 
         <div class="news-site">
             <div class="news-site-content">
@@ -51,11 +119,18 @@
                         <div class="news-site-content__main-info">НОВОСТИ</div>
                         <div class="news-site-content__second-info">
                             <div class="news-site-content__img">
-                                <img src="img/news-main-img.jpg">
+                                <img src="IMG/news-main-img.jpg">
                             </div>
                             <div class="news-site-content__description">
-                                03 марта 2023 . Начало реализации идеи создания сайтов, интернет-магазинов и приложений от концепции до реализации и поддержки.
+                                03 марта 2023 г. Начало реализации идеи создания сайтов, интернет-магазинов и приложений от концепции до реализации и поддержки.</div>
+
+                        </div>
+                        <div class="news-site-content__second-info">
+                            <div class="news-site-content__img">
+                                <img src="IMG/news-main-img.jpg">
                             </div>
+                            <div class="news-site-content__description">
+                                10 мая 2023 г. Готова альфа-версия фронтенда сайта с личным кабинетом, всплывающим меню и адаптивной версткой.</div>
                         </div>
                     </div>
                 </div>
@@ -71,4 +146,8 @@
         </footer>
     </div>
 </body>
+
+<script type="text/javascript" src="./SCRIPTS/script.js"></script>
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </html>

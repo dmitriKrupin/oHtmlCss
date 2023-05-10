@@ -1,0 +1,42 @@
+.main-site
+    flex: 1 1 auto
+
+.main-site-content
+    background-color: $color-blue
+    color: $color-white
+    font-family: 'Inter'
+    font-style: normal
+    
+    &__row
+        display: flex
+        flex-direction: column
+    
+    &__main-text
+        font-weight: 600
+        font-size: 64px
+        line-height: 110px
+        margin: 62px 201px 39px 200px
+        @media ( max-width: 768px )
+            margin: 0px
+        @media ( max-width: 480px )
+            font-weight: 300
+            font-size: 30px
+            line-height: 50px
+    
+    &__second-text
+        font-weight: 400
+        font-size: 22px
+        line-height: 100px
+        margin: 0px 0px 39px 200px
+        @media ( max-width: 768px )
+            margin: 0px
+        @media ( max-width: 480px )
+            font-weight: 200
+            font-size: 14px
+            line-height: 50px
+    
+    &__call-to-action
+        margin: 0px 201px 39px 200px
+        @media ( max-width: 768px )
+            margin: 0px
+            align-self: center
