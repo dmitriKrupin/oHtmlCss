@@ -10,16 +10,18 @@
     font-style: normal
     font-weight: 800
     margin: 0px 0px 0px 25px
-    @media ( max-width: 1250px )
-        margin: 0px
     &__row
         display: flex
         justify-content: space-between
-        gap: 15px
         @media ( max-width: 1000px )
             justify-content: space-between
     &__logo
     &__links
+        display: flex
+        text-align: center
+        justify-content: center
+        gap: 15px
+    &__short-links
         display: flex
         text-align: center
         justify-content: center
@@ -43,8 +45,11 @@
         background: $color-blue
         color: $color-white
         border-radius: 15px
+        border: 6px solid #0C0098
         cursor: pointer
         margin-right: 25px
+        align-self: center
+        line-height: 19.2px
         @media ( max-width: 1250px )
             margin: 0px
         @media ( max-width: 768px )
@@ -54,3 +59,34 @@
         cursor: pointer    
         @media ( max-width: 1000px )
             display: block
+            margin-right: 25px
+    &__icon-close
+        display: none
+
+.header-content
+    &__short-links.active-short-menu
+        display: flex
+        flex-direction: column
+        align-items: center
+        background: $color-white
+        position: absolute
+        left: 0px
+        width: 100%
+    &__search.active-short-menu
+        display: block
+    &__projects.active-short-menu
+        display: block
+    &__news.active-short-menu
+        display: block
+    &__contacts.active-short-menu
+        display: block
+    &__short-menu.chenge-on-exit
+        display: none
+    &__icon-close.active-short-menu
+        display: block
+        align-self: center
+        cursor: pointer
+        margin-right: 25px
+    &__log-in.active-short-menu
+        display: block
+        align-items: flex-start
