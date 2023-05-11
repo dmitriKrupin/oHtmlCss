@@ -5,8 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="./CSS/style.css">
-    <title>NEWS DKRUPIN.RU</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/CSS/style.css}" href="../.././static/CSS/style.css">
+    <title>PROJECTS DKRUPIN.RU</title>
 </head>
 
 <body>
@@ -112,25 +112,55 @@
             </div>
         </div>
 
-        <div class="news-site">
-            <div class="news-site-content">
+        <div class="project-site">
+            <div class="project-site-content">
                 <div class="container">
-                    <div class="news-site-content__row">
-                        <div class="news-site-content__main-info">НОВОСТИ</div>
-                        <div class="news-site-content__second-info">
-                            <div class="news-site-content__img">
-                                <img src="IMG/news-main-img.jpg">
+                    <div class="project-site-content__row">
+                        <div class="project-site-content__main-info">
+                            ЗАКУПКИ МОНТАЖНОЙ ОРГАНИЗАЦИИ</div>
+                        <div class="project-site-content__second-info">
+                            <div class="project-site-content__img">
+                                <img th:src="@{/IMG/zakupki-main-img.jpg}" src="../../static/IMG/zakupki-main-img.jpg">
                             </div>
-                            <div class="news-site-content__description">
-                                03 марта 2023 г. Начало реализации идеи создания сайтов, интернет-магазинов и приложений от концепции до реализации и поддержки.</div>
-
+                            <div class="project-site-content__description">
+                                <div class="project-site-content__description-info">
+                                    Сервис, позволяющий отслеживать купленные материалы и оборудование для реализации строительного объекта. Формирование плана закупок, себестоимости и прочих финансовых показателей.
+                                </div>
+                                <div class="project-site-content__call-to-action">
+                                    <div class="button-body">
+                                        <div class="button-body__text">
+                                            <a href="zakupki.html">ПОДРОБНОСТИ</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <div class="news-site-content__second-info">
-                            <div class="news-site-content__img">
-                                <img src="IMG/news-main-img.jpg">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="project-calculator-video">
+            <div class="project-calculator-video-content">
+                <div class="container">
+                    <div class="project-calculator-video-content__row">
+                        <div class="project-calculator-video-content__main-info">
+                            КАЛЬКУЛЯТОР ПОДБОРА ВИДЕОНАБЛЮДЕНИЯ</div>
+                        <div class="project-calculator-video-content__second-info">
+                            <div class="project-calculator-video-content__img">
+                                <img th:src="@{/IMG/video-main-img.jpg}" src="../../static/IMG/video-main-img.jpg">
                             </div>
-                            <div class="news-site-content__description">
-                                10 мая 2023 г. Готова альфа-версия фронтенда сайта с личным кабинетом, всплывающим меню и адаптивной версткой.</div>
+                            <div class="project-calculator-video-content__description">
+                                <div class="project-calculator-video-content__description-info">
+                                    Калькулятор подбора оборудования системы видеонаблюдения. Подбор по параметрам места установки, характеристик камер, времени хранения записи. Сравнение результатов подбора. Возможность оставлять комментарии и оценки подобранному оборудованию.                                </div>
+                                <div class="project-calculator-video-content__call-to-action">
+                                    <div class="button-body">
+                                        <div class="button-body__text">
+                                            <a href="video.html">ПОДРОБНОСТИ</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -147,7 +177,7 @@
     </div>
 </body>
 
-<script type="text/javascript" src="./SCRIPTS/script.js"></script>
+<script type="text/javascript" th:src="@{/SCRIPTS/script.js}" src="../../static/SCRIPTS/script.js"></script>
 <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </html>

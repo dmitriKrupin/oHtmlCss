@@ -1,12 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="./CSS/style.css">
-    <title>ZAKUPKI DKRUPIN.RU</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/CSS/style.css}" href="../.././static/CSS/style.css">
+    <title>DKRUPIN.RU</title>
 </head>
 
 <body>
@@ -112,45 +113,25 @@
             </div>
         </div>
 
-        <div class="zakupki-site">
-            <div class="container">
-                <div class="zakupki-site__row">
-                    <div class="zakupki-site__add">ДОБАВИТЬ</div>
-                    <div class="zakupki-site__search">
-                        <form class="search-body">
-                            <input type="search" id="site-search" name="search"
-                            placeholder="Введите запрос...">
-                            <button>ПОИСК</button>
-                        </form>
+        <div class="main-site">
+            <div class="main-site-content">
+                <div class="container">
+                    <div class="main-site-content__row">
+                        <div class="main-site-content__main-text">
+                            САЙТЫ <br>
+                            ИНТЕРНЕТ-МАГАЗИНЫ <br>
+                            МОБИЛЬНЫЕ ПРИЛОЖЕНИЯ</div>
+                        <div class="main-site-content__second-text">
+                            Создание сайтов, интернет магазинов и мобильных приложений: от концепции до запуска и поддержки.
+                        </div>
+                        <div class="main-site-content__call-to-action">
+                            <div class="button-body">
+                                <div class="button-body__text">
+                                    <a href="contacts.html">СВЯЗАТЬСЯ СО МНОЙ</a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="zakupki-site__filter">ФИЛЬТР</div>
-                    <div class="zakupki-site__favorite">ИЗБРАННОЕ</div>
-                </div>
-            </div>
-        </div>
-
-        <div class="client-table">
-            <div class="container">
-                <div class="client-table__row">
-                    <div class="client-table__number">№</div>
-                    <div class="client-table__object">Наименование</div>
-                    <div class="client-table__name">ФИО</div>
-                    <div class="client-table__phone">Телефон</div>
-                    <div class="client-table__email">Почта</div>
-                    <div class="client-table__comments">Комментарий</div>
-                </div>
-            </div>
-        </div>
-
-        <div class="deal-table">
-            <div class="container">
-                <div class="deal-table__row">
-                    <div class="deal-table__number">№</div>
-                    <div class="deal-table__deal">Сделка</div>
-                    <div class="deal-table__client">Клиент</div>
-                    <div class="deal-table__event">Событие</div>
-                    <div class="deal-table__comments">Комментарий</div>
-                    <div class="deal-table__attache">Вложение</div>
                 </div>
             </div>
         </div>
@@ -165,7 +146,7 @@
     </div>
 </body>
 
-<script type="text/javascript" src="./SCRIPTS/script.js"></script>
+<script type="text/javascript" th:src="@{/SCRIPTS/script.js}" src="../../static/SCRIPTS/script.js"></script>
 <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </html>
