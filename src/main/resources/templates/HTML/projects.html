@@ -11,40 +11,7 @@
 
 <body>
     <div class="wrapper">
-        <header class="header">
-            <div class="header-content">
-                <div class="container">
-                    <div class="header-content__row">
-                        <div class="header-content__logo">
-                            <a href="index.html">D K R U P I N . R U</a>
-                        </div>
-                        <div class="header-content__links">
-                            <div class="header-content__short-links">
-                                <div class="header-content__search">
-                                    <form class="search-body">
-                                        <input type="search" id="site-search" name="search"
-                                        placeholder="Введите запрос...">
-                                        <button>ПОИСК</button>
-                                    </form>
-                                </div>
-                                <div class="header-content__projects">
-                                    <a href="projects.html">ПРОЕКТЫ</a>
-                                </div>
-                                <div class="header-content__news">
-                                    <a href="news.html">НОВОСТИ</a>
-                                </div>
-                                <div class="header-content__contacts">
-                                    <a href="contacts.html">КОНТАКТЫ</a>
-                                </div>
-                                <button class="header-content__log-in">ЛИЧНЫЙ КАБИНЕТ</button>
-                            </div>
-                            <div class="header-content__short-menu"><ion-icon name="menu-outline"></ion-icon></div>
-                            <div class="header-content__icon-close"><ion-icon name="close-outline"></ion-icon></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </header>
+        <div th:insert="~{HTML/layout/header.html :: header}"></div>
 
         <div class="wrapper-login">
             <span class="icon-close"><ion-icon name="close-outline"></ion-icon></span>
@@ -167,13 +134,7 @@
             </div>
         </div>
 
-        <footer class="footer">
-            <div class="container">
-                <div class="footer_row">
-                    <div class="footer_text">ИП Крупин Д.А.</div>
-                </div>
-            </div>
-        </footer>
+        <div th:insert="~{HTML/layout/footer.html :: footer}"></div>
     </div>
 </body>
 
