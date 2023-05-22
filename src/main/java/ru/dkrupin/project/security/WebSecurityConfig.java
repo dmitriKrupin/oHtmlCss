@@ -38,6 +38,12 @@ public class WebSecurityConfig {
     @Bean
     public UserDetailsService userDetailsService() {
         log.info("Обращаемся к проверке логина и пароля!");
+        /*UserDetails user =
+                User.withDefaultPasswordEncoder()
+                        .username("user")
+                        .password("1111")
+                        .roles("USER")
+                        .build();*/
         UserDetails user =
                 User.withDefaultPasswordEncoder()
                         .username("user")
