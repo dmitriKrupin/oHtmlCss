@@ -643,6 +643,13 @@ legend {
   }
 }
 
+.login {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 .wrapper-login {
   position: absolute;
   top: 65px;
