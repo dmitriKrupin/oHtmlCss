@@ -28,9 +28,15 @@
                             </div>
                             <button class="header-content__log-in">ЛИЧНЫЙ КАБИНЕТ</button>
                             <div class="header-content__greetings">
-                                <h1 th:inline="text">Hallo
+                                <div th:inline="text">Hallo
                                     <span th:remove="tag"
-                                          sec:authentication="name">thymeleaf</span>!</h1>
+                                          sec:authentication="name">thymeleaf</span>!</div>
+                                <div th:if="${param.error}">
+                                    Invalid username and password.
+                                </div>
+                                <div th:if="${param.logout}">
+                                    You have been logged out.
+                                </div>
                                 <form th:action="@{/logout}" method="post">
                                     <input type="submit" value="Выйти"/>
                                 </form>
