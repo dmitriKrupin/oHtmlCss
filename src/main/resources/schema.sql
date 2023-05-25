@@ -5,6 +5,6 @@ CREATE TABLE IF NOT EXISTS users
     last_name  VARCHAR(512)                            NOT NULL UNIQUE,
     email      VARCHAR(255)                            NOT NULL UNIQUE,
     password   VARCHAR(512)                            NOT NULL UNIQUE,
-    active     BOOLEAN                                 NOT NULL UNIQUE,
-    role       VARCHAR(10)                             NOT NULL UNIQUE
+    active     BOOLEAN,
+    role       VARCHAR(10)                             NOT NULL
 );
