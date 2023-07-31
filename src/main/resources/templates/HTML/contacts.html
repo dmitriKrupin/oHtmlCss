@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Roboto:wght@100;300;400;500;700;900&display=swap"
+          rel="stylesheet">
+    <link rel="stylesheet" type="text/css" th:href="@{/CSS/style.css}" href="../.././static/CSS/style.css">
+    <title>CONTACTS DKRUPIN.RU</title>
+</head>
+
+<body>
+<div class="wrapper">
+    <div th:insert="~{HTML/layout/header.html :: header}"></div>
+
+    <div th:insert="~{HTML/layout/login.html :: wrapper-login}" class="login"></div>
+
+    <div class="contacts-site">
+        <div class="contacts-site-content">
+            <div class="container">
+                <div class="contacts-site-content__row">
+                    <div class="contacts-site-content__main-info">КОНТАКТЫ</div>
+                    <div class="contacts-site-content__second-info">
+                        <div class="contacts-site-content__img">
+                            <img th:src="@{/IMG/contacts-main-img.jpg}" src="../../static/IMG/contacts-main-img.jpg">
+                        </div>
+                        <div class="contacts-site-content__description">master@dkrupin.ru</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div th:insert="~{HTML/layout/footer.html :: footer}"></div>
+</div>
+</body>
+
+<script type="text/javascript" th:src="@{/SCRIPTS/script.js}" src="../../static/SCRIPTS/script.js"></script>
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</html>

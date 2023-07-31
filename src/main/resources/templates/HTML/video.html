@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" th:href="@{/CSS/style.css}" href="../.././static/CSS/style.css">
+    <title>VIDEO DKRUPIN.RU</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div th:insert="~{HTML/layout/header.html :: header}"></div>
+
+        <div th:insert="~{HTML/layout/login.html :: wrapper-login}" class="login"></div>
+
+        <div class="calculator-frame">
+            <div class="calculator-frame-content">
+                <div class="container">
+                    <div class="calculator-frame-content__row">
+                        <div class="calculator-frame-content__height-of-mounting">
+                            <fieldset>
+                                <legend>ВЫСОТА УСТАНОВКИ КАМЕР</legend>
+                                <ul>
+                                    <li>
+                                        <label for="three">до 3-х метров</label>
+                                        <input type="radio" checked id="three" name="height" value="three">
+                                    </li>
+                                    <li>
+                                        <label for="three-five">от 3 до 5 метров</label>
+                                        <input type="radio" id="three-five" name="height" value="three-five">
+                                    </li>
+                                    <li>
+                                        <label for="five-nine">от 5 до 9 метров</label>
+                                        <input type="radio" id="five-nine" name="height" value="five-nine">
+                                    </li>
+                                    <li>
+                                        <label for="more-than-nine">более 9-ти метров</label>
+                                        <input type="radio" id="more-than-nine" name="height" value="more-than-nine">
+                                    </li>
+                                </ul>
+                                <button class="next-button">ДАЛЕЕ</button>
+                            </fieldset>
+                        </div>
+                        <div class="calculator-frame-content__name">
+                            <fieldset>
+                                <legend>ПРОИЗВОДИТЕЛЬ</legend>
+                                <ul>
+                                    <li>
+                                        <label for="dahua">Dahua</label>
+                                        <input type="radio" checked id="dahua" name="factory" value="dahua">
+                                    </li>
+                                    <li>
+                                        <label for="hiWatch">HiWatch</label>
+                                        <input type="radio" id="hiWatch" name="factory" value="hiWatch">
+                                    </li>
+                                    <li>
+                                        <label for="noMatter">Не имеет значения</label>
+                                        <input type="radio" id="noMatter" name="factory" value="noMatter">
+                                    </li>
+                                </ul>
+                                <button class="previous-button">НАЗАД</button>
+                                <button class="next-button">ДАЛЕЕ</button>
+                            </fieldset>
+                        </div>
+                        <div class="calculator-frame-content__number-of-cameras">
+                            <fieldset>
+                                <legend>КОЛИЧЕСТВО КАМЕР</legend>
+                                <div class="number-of-cameras">
+                                    <output for="cameras" id="camerasId" name="number-of-cameras">0</output>
+                                    <input type="range" id="cameras" min="0" max="100" value="0" name="number-of-cameras" step="1" oninput="outputUpdate(value, name)">
+                                </div>
+                                <button class="previous-button">НАЗАД</button>
+                                <button class="next-button">ДАЛЕЕ</button>
+                            </fieldset>
+                        </div>
+                        <div class="calculator-frame-content__number-of-cables">
+                            <fieldset>
+                                <legend>МЕТРАЖ КАБЕЛЯ</legend>
+                                <div class="number-of-cables">
+                                    <output for="cables" id="cablesId" name="number-of-cables">0</output>
+                                    <input type="range" id="cables" min="0" max="600" value="0" name="number-of-cables" step="1" oninput="outputUpdate(value, name)">
+                                </div>
+                                <button class="previous-button">НАЗАД</button>
+                                <button class="next-button">ДАЛЕЕ</button>
+                            </fieldset>
+                        </div>
+                        <div class="calculator-frame-content__cable-mounting-method">
+                            <fieldset>
+                                <legend>СПОСОБ МОНТАЖА КАБЕЛЯ</legend>
+                                <button class="previous-button">НАЗАД</button>
+                                <button class="next-button">ДАЛЕЕ</button>
+                            </fieldset>
+                        </div>
+                        <div class="calculator-frame-content__register-mounting-method">
+                            <fieldset>
+                                <legend>СПОСОБ УСТАНОВКИ РЕГИСТРАТОРА</legend>
+                                <ul>
+                                    <li>
+                                        <label for="wall">На стену</label>
+                                        <input type="radio" checked id="wall" name="register-mounting" value="wall">
+                                    </li>
+                                    <li>
+                                        <label for="table">На стол</label>
+                                        <input type="radio" id="table" name="register-mounting" value="table">
+                                    </li>
+                                    <li>
+                                        <label for="server">В серверный шкаф</label>
+                                        <input type="radio" id="server" name="register-mounting" value="server">
+                                    </li>
+                                </ul>
+                                <button class="previous-button">НАЗАД</button>
+                                <button class="next-button">ДАЛЕЕ</button>
+                            </fieldset>
+                        </div>
+                        <div class="calculator-frame-content__internet-available">
+                            <fieldset>
+                                <legend>ДОСТУП В ИНТЕРНЕТ</legend>
+                                <ul>
+                                    <li>
+                                        <label for="yes">Да</label>
+                                        <input type="radio" checked id="yes" name="internet-available" value="yes">
+                                    </li>
+                                    <li>
+                                        <label for="no">Нет</label>
+                                        <input type="radio" id="no" name="internet-available" value="no">
+                                    </li>
+                                </ul>
+                                <button class="previous-button">НАЗАД</button>
+                                <button class="next-button">ДАЛЕЕ</button>
+                            </fieldset>
+                        </div>
+                        <div class="calculator-frame-content__documentation-available">
+                            <fieldset>
+                                <legend>ДОКУМЕНТАЦИЯ ДЛЯ СДАЧИ</legend>
+                                <ul>
+                                    <li>
+                                        <label for="no">Не нужна</label>
+                                        <input type="radio" checked id="no" name="documentation" value="no">
+                                    </li>
+                                    <li>
+                                        <label for="act">Нужен акт выполненных работ</label>
+                                        <input type="radio" id="act" name="documentation" value="act">
+                                    </li>
+                                    <li>
+                                        <label for="full">Нужен акт выполненных работ и исполнительная документация</label>
+                                        <input type="radio" id="full" name="documentation" value="full">
+                                    </li>
+                                </ul>
+                                <button class="previous-button">НАЗАД</button>
+                                <button class="get-cost-installation-button">ПОЛУЧИТЬ РАСЧЁТ</button>
+                            </fieldset>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div th:insert="~{HTML/layout/footer.html :: footer}"></div>
+    </div>
+    <script type="text/javascript" src="../../static/SCRIPTS/script.js"></script>
+</body>
+
+<script type="text/javascript" th:src="@{/SCRIPTS/script.js}" src="../../static/SCRIPTS/script.js"></script>
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</html>
