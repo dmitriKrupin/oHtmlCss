@@ -27,6 +27,7 @@ public class SecurityConfiguration {
                             "/",
                             "/register",
                             "/authenticate",
+                            "/set-cookie",
                             "/CSS/style.css",
                             "/SCRIPTS/script.js")
                     .permitAll()
